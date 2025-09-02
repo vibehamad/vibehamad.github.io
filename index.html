@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Voltify – Minimal Dropshipping Mock Store</title>
+  <title>MagnaFlex – Magnetic Phone Accessories</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
       --soft: #1b2230;
       --text: #e8eefc;
       --muted: #9fb0d0;
-      --accent: #7c5cff; /* change this to your brand colour */
-      --accent-2: #2dd4bf;
+      --accent: #6366F1; /* Indigo */
+      --accent-2: #10B981; /* Emerald */
       --danger: #ef4444;
     }
     *{box-sizing:border-box} html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
@@ -31,11 +31,11 @@
     .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.65rem .9rem; border-radius:12px; background:var(--accent); color:white; font-weight:600; border:none; cursor:pointer}
     .btn.secondary{background:var(--soft); color:var(--text); border:1px solid #263248}
     .btn.ghost{background:transparent; border:1px solid #2a3555}
-    .pill{padding:.25rem .55rem; border-radius:999px; background:rgba(124,92,255,.15); color:#c9beff; font-size:.75rem}
+    .pill{padding:.25rem .55rem; border-radius:999px; background:rgba(99,102,241,.15); color:#c9beff; font-size:.75rem}
 
     /* hero */
-    .hero{position:relative; overflow:hidden; border-bottom:1px solid #1f2937; background:radial-gradient(1200px 600px at 80% -50%, rgba(124,92,255,.25), transparent),
-                         radial-gradient(900px 500px at -10% -40%, rgba(45,212,191,.15), transparent)}
+    .hero{position:relative; overflow:hidden; border-bottom:1px solid #1f2937; background:radial-gradient(1200px 600px at 80% -50%, rgba(99,102,241,.25), transparent),
+                         radial-gradient(900px 500px at -10% -40%, rgba(16,185,129,.15), transparent)}
     .hero-wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:2rem; align-items:center; padding:3.2rem 0}
     .h1{font-size:clamp(1.8rem, 3.8vw, 3rem); line-height:1.1; font-weight:800; margin:0 0 .75rem}
     .sub{color:var(--muted); max-width:48ch}
@@ -59,18 +59,6 @@
     .muted{color:var(--muted); font-size:.9rem}
     .card-actions{display:flex; gap:.5rem; margin-top:.7rem}
 
-    /* cart panel */
-    .cart{position:fixed; right:1rem; bottom:1rem; background:var(--card); border:1px solid #222b43; border-radius:16px; width:320px; max-height:70vh; overflow:auto; box-shadow:0 10px 30px rgba(0,0,0,.4)}
-    .cart.hidden{display:none}
-    .cart header{position:sticky; top:0; background:var(--card); border-bottom:1px solid #222b43}
-    .cart .row{display:flex; justify-content:space-between; align-items:center}
-    .cart .content{padding:1rem}
-    .cart-item{display:grid; grid-template-columns:54px 1fr auto; gap:.6rem; align-items:center; padding:.5rem 0; border-bottom:1px dashed #263248}
-    .cart-item:last-child{border-bottom:none}
-    .qty{display:inline-flex; align-items:center; gap:.35rem; border:1px solid #273251; border-radius:10px; padding:.25rem .4rem}
-    .qty button{background:transparent; border:none; color:var(--text); font-size:1rem; cursor:pointer}
-    .empty{color:var(--muted); text-align:center; padding:1.2rem 0}
-
     footer{border-top:1px solid #1f2937; color:var(--muted); padding:2rem 0; margin-top:2rem}
   </style>
 </head>
@@ -79,12 +67,11 @@
     <div class="container nav">
       <div class="brand">
         <span class="brand-badge" aria-hidden="true">
-          <!-- simple bolt icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/>
           </svg>
         </span>
-        <span id="brandName">Voltify</span>
+        <span id="brandName">MagnaFlex</span>
         <span class="pill">mock store</span>
       </div>
       <nav class="nav-links">
@@ -93,10 +80,6 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-right">
-        <button class="btn secondary" id="openCartBtn" aria-label="Open cart">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
-          <span id="cartCount">0</span>
-        </button>
         <a class="btn ghost" href="#shop">Shop Now</a>
       </div>
     </div>
@@ -105,8 +88,8 @@
   <section class="hero">
     <div class="container hero-wrap">
       <div>
-        <h1 class="h1">Clean, minimal accessories that elevate your everyday.</h1>
-        <p class="sub">This is a **demo dropshipping website** you can use as a portfolio. Replace the name, colours, and products with your niche (pets, fitness, phone cases, home decor… anything!).</p>
+        <h1 class="h1">Snap on style. Snap off hassle.</h1>
+        <p class="sub">**MagnaFlex** makes phone life simple. We design magnetic cases and accessories that snap into place instantly. No bulky gear, no hassle — just sleek, everyday tech that works as hard as you do.</p>
         <div class="hero-cta">
           <a class="btn" href="#shop">Explore Products</a>
           <a class="btn secondary" href="#about">How it works</a>
@@ -114,10 +97,10 @@
       </div>
       <div class="peek-card">
         <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:.7rem">
-          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/voltify1/600/600" alt="Product preview 1"></div>
-          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/voltify2/600/600" alt="Product preview 2"></div>
-          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/voltify3/600/600" alt="Product preview 3"></div>
-          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/voltify4/600/600" alt="Product preview 4"></div>
+          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/magna1/600/600" alt="Product preview 1"></div>
+          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/magna2/600/600" alt="Product preview 2"></div>
+          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/magna3/600/600" alt="Product preview 3"></div>
+          <div class="imgbox" style="border-radius:12px; overflow:hidden"><img src="https://picsum.photos/seed/magna4/600/600" alt="Product preview 4"></div>
         </div>
       </div>
     </div>
@@ -130,31 +113,20 @@
     </section>
 
     <section id="about" class="section">
-      <h2>About <span id="brandName2">Voltify</span></h2>
-      <p class="muted" style="max-width:62ch">This is a portfolio demo site (no real checkout). It shows you can design a clean storefront, present products, and capture requests. Use this to pitch **web design** or **branding** work. When you’re ready to go real, connect Shopify/WooCommerce or link to WhatsApp/Instagram DMs.</p>
+      <h2>About <span id="brandName2">MagnaFlex</span></h2>
+      <p class="muted" style="max-width:62ch">MagnaFlex makes phone life simple. We design magnetic cases and accessories that snap into place instantly. No bulky gear, no hassle — just sleek, everyday tech that works as hard as you do.</p>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
       <p class="muted">Questions or want a custom bundle? Email us:</p>
-      <p><a class="btn" id="contactBtn" href="mailto:your-email@example.com?subject=Voltify%20Inquiry">Email Us</a></p>
+      <p><a class="btn" id="contactBtn" href="mailto:orders@magnaflex.example?subject=MagnaFlex%20Inquiry">Email Us</a></p>
     </section>
   </main>
 
-  <aside id="cartPanel" class="cart hidden" aria-live="polite">
-    <header>
-      <div class="content row">
-        <strong>Cart</strong>
-        <button class="btn ghost" id="closeCartBtn">Close</button>
-      </div>
-    </header>
-    <div class="content" id="cartItems"></div>
-    <div class="content" id="cartSummary"></div>
-  </aside>
-
   <footer>
     <div class="container row" style="display:flex; justify-content:space-between; align-items:center; gap:1rem">
-      <div>© <span id="year"></span> <strong id="brandName3">Voltify</strong>. Demo site for portfolio.</div>
+      <div>© <span id="year"></span> <strong id="brandName3">MagnaFlex</strong>. Demo site for portfolio.</div>
       <div style="display:flex; gap:.6rem; align-items:center">
         <span class="pill">No payments – portfolio demo</span>
       </div>
@@ -162,31 +134,27 @@
   </footer>
 
   <script>
-    // ======= CONFIG – change these to your brand =======
-    const BRAND_NAME = 'Voltify';
-    const CONTACT_EMAIL = 'your-email@example.com'; // replace this with your email
+    const BRAND_NAME = 'MagnaFlex';
+    const CONTACT_EMAIL = 'orders@magnaflex.example';
     const CURRENCY = '$';
 
-    // Example products (replace with your niche). Images use picsum.photos placeholders; seed keeps them consistent.
     const PRODUCTS = [
-      {id:'p1', name:'Matte Snap Phone Case', price:14.99, img:'https://picsum.photos/seed/case1/800/800', badge:'NEW'},
-      {id:'p2', name:'MagSafe Clear Case', price:19.99, img:'https://picsum.photos/seed/case2/800/800', badge:'BESTSELLER'},
-      {id:'p3', name:'Braided USB‑C Cable', price:9.99, img:'https://picsum.photos/seed/cable1/800/800'},
-      {id:'p4', name:'20W Compact Charger', price:12.99, img:'https://picsum.photos/seed/charger1/800/800'},
-      {id:'p5', name:'Anodized Phone Stand', price:16.00, img:'https://picsum.photos/seed/stand1/800/800'},
-      {id:'p6', name:'Tempered Glass (2‑Pack)', price:7.50, img:'https://picsum.photos/seed/glass1/800/800'},
-      {id:'p7', name:'Cable Organizer Clips', price:5.99, img:'https://picsum.photos/seed/clips1/800/800'},
-      {id:'p8', name:'Wireless Charging Pad', price:21.00, img:'https://picsum.photos/seed/charger2/800/800'}
+      {id:'p1', name:'MagnaFlex Clear Case (Magsafe Ready)', price:18.99, img:'https://picsum.photos/seed/caseflex1/800/800', badge:'NEW'},
+      {id:'p2', name:'Slim Magnetic Wallet Attachment', price:12.50, img:'https://picsum.photos/seed/walletflex/800/800', badge:'BESTSELLER'},
+      {id:'p3', name:'360° Phone Ring Holder', price:8.99, img:'https://picsum.photos/seed/ringflex/800/800'},
+      {id:'p4', name:'Foldable Magnetic Stand', price:15.00, img:'https://picsum.photos/seed/standflex/800/800'},
+      {id:'p5', name:'20W Magnetic Charger Pad', price:19.99, img:'https://picsum.photos/seed/chargerflex/800/800'},
+      {id:'p6', name:'Matte Screen Protector (2-Pack)', price:7.50, img:'https://picsum.photos/seed/protectorflex/800/800'},
+      {id:'p7', name:'Cable Organizer Clips', price:5.99, img:'https://picsum.photos/seed/clipsflex/800/800'},
+      {id:'p8', name:'Bundle Deal: Case + Stand + Charger', price:39.99, img:'https://picsum.photos/seed/bundleflex/800/800'}
     ];
 
-    // Fill brand name & footer year
     document.getElementById('brandName').textContent = BRAND_NAME;
     document.getElementById('brandName2').textContent = BRAND_NAME;
     document.getElementById('brandName3').textContent = BRAND_NAME;
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('contactBtn').href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(BRAND_NAME + ' Inquiry')}`;
 
-    // Render product grid
     const grid = document.getElementById('productGrid');
     function renderProducts(){
       grid.innerHTML = PRODUCTS.map(p=>`
@@ -200,7 +168,7 @@
             <div class="row" style="display:flex; justify-content:space-between; align-items:center">
               <span class="price">${CURRENCY}${p.price.toFixed(2)}</span>
               <div class="card-actions">
-                <button class="btn secondary" onclick="addToCart('${p.id}')">Add to cart</button>
+                <button class="btn secondary">Add to cart</button>
               </div>
             </div>
             <p class="muted" style="margin:.5rem 0 0">Ships in 5–8 days • Free returns</p>
@@ -208,73 +176,6 @@
         </article>`).join('');
     }
     renderProducts();
-
-    // Simple cart (local, demo only)
-    const cart = {};// id -> qty
-    function addToCart(id){ cart[id] = (cart[id]||0)+1; updateCart(); showCart(); }
-    function removeFromCart(id){ if(cart[id]){ cart[id]--; if(cart[id]<=0) delete cart[id]; updateCart(); } }
-
-    function updateCart(){
-      const items = Object.entries(cart).map(([id,qty])=>{
-        const p = PRODUCTS.find(x=>x.id===id);
-        return {...p, qty, total:p.price*qty};
-      });
-      const count = items.reduce((a,b)=>a+b.qty,0);
-      document.getElementById('cartCount').textContent = count;
-
-      const wrap = document.getElementById('cartItems');
-      if(items.length===0){
-        wrap.innerHTML = `<div class="empty">Your cart is empty.</div>`;
-        document.getElementById('cartSummary').innerHTML = '';
-        return;
-      }
-      wrap.innerHTML = items.map(it=>`
-        <div class="cart-item">
-          <img src="${it.img}" alt="${it.name}" style="width:54px; height:54px; object-fit:cover; border-radius:10px">
-          <div>
-            <div style="font-weight:600">${it.name}</div>
-            <div class="muted">${CURRENCY}${it.price.toFixed(2)}</div>
-          </div>
-          <div class="qty">
-            <button onclick="removeFromCart('${it.id}')">−</button>
-            <span>${it.qty}</span>
-            <button onclick="addToCart('${it.id}')">+</button>
-          </div>
-        </div>`).join('');
-
-      const subtotal = items.reduce((a,b)=>a+b.total,0);
-      document.getElementById('cartSummary').innerHTML = `
-        <div class="row" style="display:flex; justify-content:space-between; align-items:center; margin-top:.6rem">
-          <div><strong>Subtotal:</strong></div>
-          <div style="font-weight:800">${CURRENCY}${subtotal.toFixed(2)}</div>
-        </div>
-        <div style="display:flex; gap:.5rem; margin-top:.8rem">
-          <button class="btn" onclick="checkout()">Checkout (email)</button>
-          <button class="btn ghost" onclick="clearCart()">Clear</button>
-        </div>`;
-    }
-
-    function clearCart(){ for(const k in cart) delete cart[k]; updateCart(); }
-
-    function checkout(){
-      const items = Object.entries(cart).map(([id,qty])=>{
-        const p = PRODUCTS.find(x=>x.id===id);
-        return `• ${p.name} x${qty} — ${CURRENCY}${(p.price*qty).toFixed(2)}`;
-      }).join('%0D%0A');
-      const total = Object.entries(cart).reduce((a,[id,qty])=>{
-        const p = PRODUCTS.find(x=>x.id===id); return a + p.price*qty; }, 0);
-      const subject = encodeURIComponent(`${BRAND_NAME} – Cart Checkout Request`);
-      const body = `Hi, I\'d like to order:%0D%0A${items}%0D%0A%0D%0ATotal: ${CURRENCY}${total.toFixed(2)}%0D%0AName:%0D%0AAddress:%0D%0APhone:`;
-      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    }
-
-    // cart panel open/close
-    const panel = document.getElementById('cartPanel');
-    const openBtn = document.getElementById('openCartBtn');
-    const closeBtn = document.getElementById('closeCartBtn');
-    function showCart(){ panel.classList.remove('hidden'); }
-    openBtn.addEventListener('click', ()=>{ showCart(); });
-    closeBtn.addEventListener('click', ()=> panel.classList.add('hidden'));
   </script>
 </body>
 </html>
